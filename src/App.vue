@@ -1,13 +1,27 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
-  </div>
+    <div id="app">
+        
+        <div class="wrapper">
+            <div class="contaniner">
+                <transition
+                    name="custom-classes-transition"
+                    enter-active-class="animated fadeIn"
+                >
+                    <router-view></router-view>
+                </transition>
+            </div>
+        </div>
+        <footer-tab></footer-tab>
+    </div>
 </template>
 
 <script>
+import FooterTab from '@/components/FooterTab/FooterTab';
 export default {
-  name: 'app'
+  name: 'app',
+  components:{
+      'footer-tab': FooterTab
+  },
 }
 </script>
 
