@@ -1,6 +1,9 @@
 <template>
     <div class="footer-tab">
-        <router-link active-class='menu-active' :to="menu.path" tag="div" v-for="menu in menuData"><a>{{menu.text}}</a></router-link>
+        <router-link active-class='menu-active' :to="menu.path" tag="div" v-for="menu in menuData">
+            <i :class="menu.code"></i>
+            <a>{{menu.text}}</a>
+        </router-link>
     </div>
 </template>
 
@@ -11,13 +14,16 @@
     Vue.component(TabItem.name, TabItem);
     const menuData = [{
         text: '首页',
-        path: '/index'
+        path: '/index',
+        code:'index'
     }, {
         text: '分类',
-        path: '/classification'
+        path: '/classification',
+        code:'classification'
     },{
         text: '购物车',
-        path: '/shoppingcart'
+        path: '/shoppingcart',
+        code:'shoppingcart'
     }];
 
     export default {
@@ -39,7 +45,7 @@
 
 <style lang="scss" socped>
     .footer-tab{
-        background-color: #efefef;
+        background-color: #e3e1e1;
         right: 0;
         bottom: 0;
         left: 0;
@@ -50,7 +56,22 @@
         div{
             display: block;
             flex:1;
-            height: 30px;
+            height: 70px;
+            i{  
+                display:block;
+                width: 40px;
+                height: 41px;
+                margin: 0px auto 5px;
+            }
+            i.index{
+                background: url(../../assets/icons.png) -30px -44px no-repeat;
+            }
+            i.classification{
+                background: url(../../assets/icons.png) -430px -566px no-repeat;
+            }
+            i.shoppingcart{
+                background: url(../../assets/icons.png) -353px -304px no-repeat;
+            }
         }
         .menu-active{
             background-color: #a9a9dc;
