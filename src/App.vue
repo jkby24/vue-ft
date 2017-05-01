@@ -1,15 +1,12 @@
 <template>
     <div id="app">
-        
-        <div class="wrapper">
-            <div class="contaniner">
-                <transition
-                    name="custom-classes-transition"
-                    enter-active-class="animated fadeIn"
-                >
-                    <router-view></router-view>
-                </transition>
-            </div>
+        <div class="contaniner">
+            <transition
+                name="custom-classes-transition"
+                enter-active-class="animated fadeIn"
+            >
+                <router-view></router-view>
+            </transition>
         </div>
         <footer-tab></footer-tab>
     </div>

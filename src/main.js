@@ -3,9 +3,7 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-import ElementUI from 'element-ui';
-// 注册全局组件
-Vue.use(ElementUI);
+import 'mint-ui/lib/style.css'
 
 Vue.config.productionTip = false;
 
