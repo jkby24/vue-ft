@@ -19,3 +19,21 @@ npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+# api
+### 通用数据模型
+    - 商品详情
+``` bash
+{
+    commodity_id:'',//商品id
+    title:'',//商品名称
+    description:'',//商品描述
+    price:'',//价格
+    classification:'',//分类
+    create_date:'',
+    update_date:'',
+    create_by:'',
+    status:''//状态
+}
+```

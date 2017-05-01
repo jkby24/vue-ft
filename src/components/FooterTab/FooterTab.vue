@@ -39,6 +39,7 @@
 
 <style lang="scss" socped>
     .footer-tab{
+        background-color: #efefef;
         right: 0;
         bottom: 0;
         left: 0;
