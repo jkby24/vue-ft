@@ -56,21 +56,22 @@
         div{
             display: block;
             flex:1;
-            height: 70px;
+            height: 6rem;
             i{  
                 display:block;
-                width: 40px;
-                height: 41px;
-                margin: 0px auto 5px;
+                width: 60px;
+                height: 60px;
+                margin: 1px auto 5px;
+                background-color: #000;
             }
             i.index{
-                background: url(../../assets/icons.png) -30px -44px no-repeat;
+                background: url(../../assets/icons.png) -45px -66px no-repeat;
             }
             i.classification{
-                background: url(../../assets/icons.png) -430px -566px no-repeat;
+                background: url(../../assets/icons.png) -658px -851px no-repeat;
             }
             i.shoppingcart{
-                background: url(../../assets/icons.png) -353px -304px no-repeat;
+                background: url(../../assets/icons.png) -530px -459px no-repeat;
             }
         }
         .menu-active{
