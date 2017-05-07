@@ -4,7 +4,7 @@ import Index from '@/components/Index'
 import Classification from '@/components/Classification'
 import ShoppingCart from '@/components/ShoppingCart'
 import User from '@/components/User'
-
+import GoodsIndex from '@/components/Goods/GoodsIndex'
 Vue.use(Router)
 
 export default new Router({
@@ -28,6 +28,10 @@ export default new Router({
       path: '/shoppingcart',
       name: 'ShoppingCart',
       component: ShoppingCart
+    },{
+      path: '/goods/:id',
+      name: 'GoodsIndex',
+      component: GoodsIndex
     }
   ]
 })

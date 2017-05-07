@@ -26,8 +26,8 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
     - 商品详情
 ``` bash
 {
-    commodity_id:'',//商品id
-    title:'',//商品名称
+    goods_id:'',//商品id
+    goods_name:'',//商品名称
     description:'',//商品描述
     price:'',//价格
     classification:'',//分类
