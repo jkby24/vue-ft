@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/components/Index'
+import Home from '@/components/Home'
 import Classification from '@/components/Classification'
 import ShoppingCart from '@/components/ShoppingCart'
 import User from '@/components/User'
@@ -13,23 +14,26 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/index'
-    }
-    ,{
-      path: '/index',
       name: 'Index',
-      component: Index
+      component: Index,
+      children:[
+          { 
+            path: 'home', 
+            name: 'Home',
+            component: Home
+          },
+          { 
+            path: 'classification', 
+            name: 'Classification',
+            component: Classification
+          },{ 
+            path: 'shoppingcart', 
+            name: 'ShoppingCart',
+            component: ShoppingCart
+          }  
+      ]
     }
     ,{
-      path: '/classification',
-      name: 'Classification',
-      component: Classification
-    }
-    ,{
-      path: '/shoppingcart',
-      name: 'ShoppingCart',
-      component: ShoppingCart
-    },{
       path: '/goods/:id',
       name: 'Goods',
       component: Goods,
@@ -44,7 +48,7 @@ export default new Router({
       ]
     },{
         path: '/*',
-        redirect: '/index'
+        redirect: '/home'
     }
   ]
 })

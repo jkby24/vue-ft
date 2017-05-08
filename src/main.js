@@ -6,7 +6,9 @@ import router from './router';
 import 'mint-ui/lib/style.css'
 import 'animate.css'
 Vue.config.productionTip = false;
+import Back from '@/components/Back';
 
+Vue.component('back', Back);
 /* eslint-disable no-new */
 new Vue({
     el: '#app',
@@ -16,3 +18,4 @@ new Vue({
         App
     }
 });
+router.push('/home')

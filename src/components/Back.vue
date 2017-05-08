@@ -1,7 +1,8 @@
 <template>
   <div>
-    <h1>{{ msg }}</h1>
-    <div>商品：<router-link to="/goods/3344234">32434234</router-link></div>
+    {{backRouter}}
+    <h1 @click="$router.push(backRouter)">返回</h1>
+  </div>
   </div>
 </template>
 
@@ -9,8 +10,12 @@
 export default {
   data() {
     return {
-      msg: 'Classification'
     }
+  },
+  props:{
+      backRouter: {
+          type: String
+      }
   }
 }
 </script>

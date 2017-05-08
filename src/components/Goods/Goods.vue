@@ -1,6 +1,7 @@
 <template>
     <div>
         <h1>{{ msg }}商品ID {{ $route.params.id }}</h1>
+        <back :back-router="backRouter">返回</back>
         <router-link to="/goods/3344234">商品</router-link>
         <router-link to="/goods/3344234/detail">详情</router-link>
         <transition 
@@ -14,8 +15,14 @@
 export default {
     data() {
         return {
-            msg: 'Goods'
+            msg: 'Goods',
+            backRouter:''
         }
+    },
+    beforeRouteEnter (to, from, next) {
+        next(vm => {
+            vm.backRouter = from.fullPath;
+        });
     }
 }
 </script>

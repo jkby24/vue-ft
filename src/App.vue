@@ -1,21 +1,14 @@
 <template>
     <div id="app">
-        <div class="contaniner">
-            <transition enter-active-class="animated fadeIn">
-                <router-view></router-view>
-            </transition>
-        </div>
-        <footer-tab></footer-tab>
+        <transition enter-active-class="animated fadeIn">
+            <router-view></router-view>
+        </transition>
     </div>
 </template>
 
 <script>
-import FooterTab from '@/components/FooterTab/FooterTab';
 export default {
-    name: 'app',
-    components: {
-        'footer-tab': FooterTab
-    },
+    name: 'app'
 }
 </script>
 

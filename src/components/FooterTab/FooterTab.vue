@@ -14,8 +14,8 @@ Vue.component(Tabbar.name, Tabbar);
 Vue.component(TabItem.name, TabItem);
 const menuData = [{
     text: '首页',
-    path: '/index',
-    code: 'index'
+    path: '/home',
+    code: 'home'
 }, {
     text: '分类',
     path: '/classification',
@@ -64,7 +64,7 @@ export default {
             margin: 1px auto 5px;
             background-color: #000;
         }
-        i.index {
+        i.home {
             background: url(../../assets/icons.png) -45px -66px no-repeat;
         }
         i.classification {
