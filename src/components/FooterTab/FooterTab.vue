@@ -21,7 +21,7 @@ const menuData = [{
     path: '/classification',
     code: 'classification'
 }, {
-    text: '购物车',
+    text: '车',
     path: '/shoppingcart',
     code: 'shoppingcart'
 }];

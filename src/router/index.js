@@ -4,15 +4,16 @@ import Index from '@/components/Index'
 import Classification from '@/components/Classification'
 import ShoppingCart from '@/components/ShoppingCart'
 import User from '@/components/User'
+import Goods from '@/components/Goods/Goods'
 import GoodsIndex from '@/components/Goods/GoodsIndex'
+import GoodsDetail from '@/components/Goods/GoodsDetail'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Index',
-      component: Index
+      redirect: '/index'
     }
     ,{
       path: '/index',
@@ -30,8 +31,20 @@ export default new Router({
       component: ShoppingCart
     },{
       path: '/goods/:id',
-      name: 'GoodsIndex',
-      component: GoodsIndex
+      name: 'Goods',
+      component: Goods,
+      children:[
+          { 
+            path: '', 
+            component: GoodsIndex
+          },{ 
+            path: 'detail', 
+            component: GoodsDetail
+          }  
+      ]
+    },{
+        path: '/*',
+        redirect: '/index'
     }
   ]
 })
