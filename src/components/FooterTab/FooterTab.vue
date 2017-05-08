@@ -9,9 +9,6 @@
 
 <script>
 import Vue from 'vue';
-import { Tabbar, TabItem } from 'mint-ui';
-Vue.component(Tabbar.name, Tabbar);
-Vue.component(TabItem.name, TabItem);
 const menuData = [{
     text: '首页',
     path: '/home',

@@ -27,7 +27,7 @@ html {
 }
 
 a {
-    cursor: pointer;
+    cursor: pointer !important;
     outline: none;
 }
 

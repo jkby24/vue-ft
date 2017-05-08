@@ -37,3 +37,7 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
     status:''//状态
 }
 ```
+
+
+- [] 购物车store状态
+- [] 
