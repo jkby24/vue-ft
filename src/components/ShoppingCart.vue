@@ -2,8 +2,8 @@
   <div>
     <h1>{{ msg }}</h1>
     <ul>
-      <li v-for="p in products">
-        {{ p.title }} - {{ p.price | currency }} x {{ p.quantity }}
+      <li v-for="p in commodities">
+        {{ p.commodity_name }} - {{ p.price | currency }} x {{ p.quantity }}
       </li>
     </ul>
     <p>Total: {{ total | currency }}</p>
@@ -20,11 +20,11 @@ export default {
   },
   computed: {
     ...mapGetters({
-      products: 'cartProducts',
+      commodities: 'cartCommodities',
       checkoutStatus: 'checkoutStatus'
     }),
     total () {
-      return this.products.reduce((total, p) => {
+      return this.commodities.reduce((total, p) => {
         return total + p.price * p.quantity
       }, 0)
     }

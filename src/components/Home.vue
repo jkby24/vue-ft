@@ -4,8 +4,8 @@
     <div>商品：
       <router-link to="/commodity/3344234">32434234</router-link>
       <ul>
-        <li v-for="p in products">
-          {{ p.title }} - {{ p.price | currency }}
+        <li v-for="p in commodities">
+          {{ p.commodity_name }} - {{ p.price | currency }}
           <br>
           <button :disabled="!p.inventory" @click="addToCart(p)">
             Add to cart
@@ -18,27 +18,21 @@
 </template>
 
 <script>
-const _commodities = [
-  { "commodity_id": 1, "commodity_name": "iPad 4 Mini", "price": 500.01, "inventory": 2 },
-  { "commodity_id": 2, "commodity_name": "H&M T-Shirt White", "price": 10.99, "inventory": 10 },
-  { "commodity_id": 3, "commodity_name": "Charli XCX - Sucker CD", "price": 19.99, "inventory": 5 }
-]
 import { mapGetters, mapActions } from 'vuex'
 export default {
   data() {
     return {
-      msg: 'HOME',
-      commodities: _commodities
+      msg: 'HOME'
     }
   },
   computed: mapGetters({
-    products: 'allProducts'
+    commodities: 'allCommodities'
   }),
   methods: mapActions([
     'addToCart'
   ]),
   created() {
-    this.$store.dispatch('getAllProducts')
+    this.$store.dispatch('getAllCommodities')
   }
 }
 </script>

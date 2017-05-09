@@ -2,7 +2,7 @@ import shop from '@/service/api/shop'
 import * as types from '../mutation-types'
 
 // initial state
-// shape: [{ id, quantity }]
+// shape: [{ commodity_id, quantity }]
 const state = {
   added: [],
   checkoutStatus: null
@@ -15,11 +15,11 @@ const getters = {
 
 // actions
 const actions = {
-  checkout ({ commit, state }, products) {
+  checkout ({ commit, state }, commodities) {
     const savedCartItems = [...state.added]
     commit(types.CHECKOUT_REQUEST)
-    shop.buyProducts(
-      products,
+    shop.buyCommodities(
+      commodities,
       () => commit(types.CHECKOUT_SUCCESS),
       () => commit(types.CHECKOUT_FAILURE, { savedCartItems })
     )
@@ -28,12 +28,12 @@ const actions = {
 
 // mutations
 const mutations = {
-  [types.ADD_TO_CART] (state, { id }) {
+  [types.ADD_TO_CART] (state, { commodity_id }) {
     state.lastCheckout = null
-    const record = state.added.find(p => p.id === id)
+    const record = state.added.find(p => p.commodity_id === commodity_id)
     if (!record) {
       state.added.push({
-        id,
+        commodity_id,
         quantity: 1
       })
     } else {
