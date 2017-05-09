@@ -5,9 +5,9 @@ import Home from '@/components/Home'
 import Classification from '@/components/Classification'
 import ShoppingCart from '@/components/ShoppingCart'
 import User from '@/components/User'
-import Goods from '@/components/Goods/Goods'
-import GoodsIndex from '@/components/Goods/GoodsIndex'
-import GoodsDetail from '@/components/Goods/GoodsDetail'
+import Commodity from '@/components/commodity/Commodity'
+import CommodityIndex from '@/components/Commodity/CommodityIndex'
+import CommodityDetail from '@/components/Commodity/CommodityDetail'
 Vue.use(Router)
 
 export default new Router({
@@ -34,16 +34,16 @@ export default new Router({
       ]
     }
     ,{
-      path: '/goods/:id',
-      name: 'Goods',
-      component: Goods,
+      path: '/commodity/:id',
+      name: 'Commodity',
+      component: Commodity,
       children:[
           { 
             path: '', 
-            component: GoodsIndex
+            component: CommodityIndex
           },{ 
             path: 'detail', 
-            component: GoodsDetail
+            component: CommodityDetail
           }  
       ]
     },{

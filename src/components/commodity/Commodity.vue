@@ -1,8 +1,8 @@
 <template>
     <div>
         <back :back-router="backRouter" :title="$route.params.id">返回</back>
-        <router-link to="/goods/3344234">商品</router-link>
-        <router-link to="/goods/3344234/detail">详情</router-link>
+        <router-link to="/commodity/3344234">商品</router-link>
+        <router-link to="/commodity/3344234/detail">详情</router-link>
         <transition 
              enter-active-class="animated fadeIn">
                 <router-view></router-view>
@@ -14,7 +14,7 @@
 export default {
     data() {
         return {
-            msg: 'Goods',
+            msg: 'Commodity',
             backRouter:''
         }
     },

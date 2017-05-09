@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{ msg }}</h1>
-    <div>商品：<router-link to="/goods/3344234">32434234</router-link></div>
+    <div>商品：<router-link to="/commodity/3344234">32434234</router-link></div>
   </div>
 </template>
 
