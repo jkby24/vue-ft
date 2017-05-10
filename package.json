@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
+    "server": "node server/server.js",
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src"
   },
@@ -17,7 +18,15 @@
     "mockjs": "^1.0.1-beta3",
     "vue": "^2.2.6",
     "vue-router": "^2.4.0",
-    "vuex": "^2.3.1"
+    "vuex": "^2.3.1",
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-beta.1",
+    "express": "^4.15.2",
+    "express-router": "^0.0.1",
+    "express-static": "^1.1.0",
+    "jsonp": "^0.2.1",
+    "mysql": "^2.13.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
