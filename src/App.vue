@@ -13,25 +13,52 @@ export default {
 </script>
 
 <style>
-html {
-    font-size: 20px
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    /*去掉chorm浏览器中默认点击的颜色*/
+    -webkit-tap-highlight-color: transparent;
+    -webkit-box-sizing: border-box;
 }
 
-#app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
+body {
+    font-size: 14px;
+    font-family: "Microsoft YaHei" sans-serif;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    
 }
-
+    
 a {
-    cursor: pointer !important;
-    outline: none;
+    text-decoration: none;
+    color: #000;
 }
 
-a:hover {
-    text-decoration: none !important;
+ul {
+    list-style: none;
 }
+
+input,
+textarea {
+    border: none;
+    resize: none;
+    outline: none;
+    /*清除移动设备中表单的默认样式*/
+    -webkit-appearance: none;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: '.';
+    height: 0;
+    line-height: 0;
+    clear: both;
+    display: block;
+    visibility: hidden;
+}
+
 </style>

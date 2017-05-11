@@ -20,5 +20,15 @@ export default {
 </script>
 
 <style>
+body {
+    background-color: #F3F3F3;
+}
 
+.contaniner {
+    min-width: 300px;
+    max-width: 640px;
+    margin: 0 auto;
+    position: relative;
+    height: 1000px;
+}
 </style>
