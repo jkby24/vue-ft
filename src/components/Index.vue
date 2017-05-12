@@ -19,16 +19,17 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" >
+@import "../assets/css/common.scss";
 body {
     background-color: #F3F3F3;
 }
 
 .contaniner {
-    min-width: 300px;
-    max-width: 640px;
+    min-width: px2em(300px);
+    max-width: px2em(640px);
     margin: 0 auto;
     position: relative;
-    height: 1000px;
+    height: px2em(1000px);
 }
 </style>
