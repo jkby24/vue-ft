@@ -1,32 +1,14 @@
 <template>
-<div class="footer">
-  	<footer class="fixBottomBox">
-        <ul>
-           
-            <router-link tag="li" to="/home" class="tabItem">
-            	<a href="javascript:;" class="tab-item-link">
-                    <img src="../../assets/images/a-home.png" alt="" class="tab-item-icon">
-                </a>
-            </router-link>
-            <router-link tag="li" to="/classification" class="tabItem">
-                <a href="javascript:;" class="tab-item-link">
-                    <img src="../../assets/images/n-catergry.png" alt="" class="tab-item-icon">
-                </a>
-            </router-link>
-            <router-link tag="li" to="/shoppingcart" class="tabItem">
-                <a href="javascript:;" class="tab-item-link">
-                    <img src="../../assets/images/n-cart.png" alt="" class="tab-item-icon">
-                </a>
-            </router-link>
-        </ul>
-    </footer>
-  </div>
-    <!--<div class="footer-tab">
-        <router-link active-class='menu-active' :to="menu.path" tag="div" v-for="menu in menuData">
-            <i :class="menu.code"></i>
-            <a>{{menu.text}}</a>
-        </router-link>
-    </div>-->
+    <div class="footer">
+        <footer class="fixBottomBox">
+            <ul>
+                <router-link active-class='menu-active' tag="li" :to="menu.path" class="tabItem" v-for="menu in menuData">
+                    <i :class="menu.code"></i>
+                    <a>{{menu.text}}</a>
+                </router-link>
+            </ul>
+        </footer>
+    </div>
 </template>
 
 <script>
@@ -84,13 +66,13 @@ export default {
             background-color: #000;
         }
         i.home {
-            background: url(../../assets/icons.png) -45px -66px no-repeat;
+            // background: url(../../assets/icons.png) -45px -66px no-repeat;
         }
         i.classification {
-            background: url(../../assets/icons.png) -658px -851px no-repeat;
+            // background: url(../../assets/icons.png) -658px -851px no-repeat;
         }
         i.shoppingcart {
-            background: url(../../assets/icons.png) -530px -459px no-repeat;
+            // background: url(../../assets/icons.png) -530px -459px no-repeat;
         }
     }
     .menu-active {
@@ -106,29 +88,47 @@ export default {
     bottom: 0;
     left: 0;
     background-color: #fff;
+    ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    .tabItem {
+        width: 18%;
+        height: 100%;
+        text-align: center;
+        i {
+            display: block;
+            width: 35px;
+            height: 30px;
+            margin: 1px auto 1px;
+            background-color: #000;
+        }
+        i.home {
+            background: url(../../assets/images/footbar-home.png) 0 0 no-repeat;
+        }
+        i.classification {
+            background: url(../../assets/images/footbar-classification.png) 0 0 no-repeat;
+        }
+        i.shoppingcart {
+            background: url(../../assets/images/footbar-shoppingcart.png) 0 0 no-repeat;
+        }
+        a {
+            color: #5d5f6a;
+        }
+    }
+    .menu-active {
+        i.home {
+            background: url(../../assets/images/footbar-home-active.png) 0 0 no-repeat;
+        }
+        i.classification {
+            background: url(../../assets/images/footbar-classification-active.png) 0 0 no-repeat;
+        }
+        i.shoppingcart {
+            background: url(../../assets/images/footbar-shoppingcart-active.png) 0 0 no-repeat;
+        }
+        a {
+            color: #ec6149;
+        }
+    }
 }
-
-.fixBottomBox ul {
-    display: flex;
-    justify-content: space-around;
-}
-
-.fixBottomBox .tabItem {
-    width: 18%;
-    height: 100%;
-    text-align: center;
-}
-
-.tabItem .tab-item-link {
-    display: inline-flex;
-    width: 70px;
-    height: 50px;
-}
-
-.tabItem .tab-item-link .tab-item-icon {
-    display: inline-flex;
-    width: 100%;
-    height: auto;
-}
-
 </style>
