@@ -13,6 +13,7 @@ export default {
 </script>
 
 <style>
+html {font-size: 60px!important;}
 *,
 ::before,
 ::after {

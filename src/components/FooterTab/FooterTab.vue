@@ -1,10 +1,15 @@
 <template>
     <div class="footer">
-        <div class="footer">
-            <router-link :active-class="menu.code+'-active'" tag="div" :to="menu.path" class="item" :class="menu.code" v-for="menu in menuData">
-               {{menu.text}}
-            </router-link>
-        </div>
+        <ul>
+            <li v-for="menu in menuData">
+                    <router-link active-class="on" tag="a" :to="menu.path" :class="menu.code">
+                         <div class="nav">
+                            <div class="ih ispr"  :class="menu.classCode"></div>
+                            <p>{{menu.text}}</p>
+                        </div>
+                    </router-link>
+                </li>
+        </ul>
     </div>
 </template>
 
@@ -13,15 +18,18 @@ import Vue from 'vue';
 const menuData = [{
     text: '首页',
     path: '/home',
-    code: 'home'
+    code: 'home',
+    classCode:'ih'
 }, {
     text: '分类',
     path: '/classification',
-    code: 'classification'
+    code: 'classification',
+    classCode:'ic'
 }, {
     text: '车',
     path: '/shoppingcart',
-    code: 'shoppingcart'
+    code: 'shoppingcart',
+    classCode:'is'
 }];
 
 export default {
@@ -42,56 +50,72 @@ export default {
 
 <style lang="scss" socped>
 .footer {
-    display: flex;
-    height: 50px;
     position: fixed;
     bottom: 0;
+    left: 0;
+    right: 0;
+    background: #FFF;
+    z-index: 99;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer ul {
+    display:-webkit-box;
+    display:box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+}
+.footer .nav .ispr {
+    width: .4rem;
+    height: .4rem;
+    background-image: url(../../assets/images/foot-spr.png);
+    -webkit-background-size: .4rem 3.2rem;
+    -moz-background-size: .4rem 3.2rem;
+    -ms-background-size: .4rem 3.2rem;
+    -o-background-size: .4rem 3.2rem;
+    background-size: .4rem 3.2rem;
+    overflow: hidden;
+    margin: 0 auto .08rem
+}
+.footer .nav .ispr.ih {
+    background-position-y: -2.8rem
+}
+.footer .nav .ispr.ic {
+    background-position-y: -.4rem
+}
+.footer .nav .ispr.is {
+    background-position-y: -1.2rem
+}
+.footer .nav .ispr.if {
+    background-position-y: -2rem
+}
+.footer .nav p {
+    font-size: .22rem;
+    line-height: .8;
+    color: #999
+}
+.footer li {
+    -webkit-box-flex: 1;
     width: 100%;
-    border-top: 1px solid #ddd;
-    background: #fff;
-    .item {
-      width: 100%;
-      height: 100%;
-      line-height: 75px;
-      color: #888;
-      font-size: 12px;
-      text-align: center;
-      &.home {
-        background: url("../../assets/images/svg/footer_home1.svg") no-repeat center 25%;
-        background-size: 20px;
-      }
-      &.home-active {
-        color: #ff6700;
-        background: url("../../assets/images/svg/footer_home.svg") no-repeat center 25%;
-        background-size: 20px;
-      }
-      &.classification {
-        background: url("../../assets/images/svg/footer_lei1.svg") no-repeat center 25%;
-        background-size: 20px;
-      }
-      &.classification-active {
-        color: #ff6700;
-        background: url("../../assets/images/svg/footer_lei.svg") no-repeat center 25%;
-        background-size: 20px;
-      }
-      &.shoppingcart {
-        background: url("../../assets/images/svg/footer_cart1.svg") no-repeat center 25%;
-        background-size: 20px;
-      }
-      &.shoppingcart-active {
-        color: #ff6700;
-        background: url("../../assets/images/svg/footer_cart.svg") no-repeat center 25%;
-        background-size: 20px;
-      }
-      &.me {
-        background: url("../../assets/images/svg/footer_me1.svg") no-repeat center 25%;
-        background-size: 20px;
-      }
-      &.me-active {
-        color: #ff6700;
-        background: url("../../assets/images/svg/footer_me.svg") no-repeat center 25%;
-        background-size: 20px;
-      }
-    }
-  }
+    text-align: center;
+}
+.footer li>a {
+    display: block;
+    padding: .12rem 0
+}
+.footer li>a.on .nav p {
+    color: #FF5722
+}
+.footer li>a.on .nav .ispr.ih {
+    background-position-y: -2.4rem
+}
+.footer li>a.on .nav .ispr.ic {
+    background-position-y: 0
+}
+.footer li>a.on .nav .ispr.is {
+    background-position-y: -.8rem
+}
+.footer li>a.on .nav .ispr.if {
+    background-position-y: -1.6rem
+}
 </style>
