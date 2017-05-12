@@ -2,13 +2,13 @@
     <div class="footer">
         <ul>
             <li v-for="menu in menuData">
-                    <router-link active-class="on" tag="a" :to="menu.path" :class="menu.code">
-                         <div class="nav">
-                            <div class="ih ispr"  :class="menu.classCode"></div>
-                            <p>{{menu.text}}</p>
-                        </div>
-                    </router-link>
-                </li>
+                <router-link active-class="on" tag="a" :to="menu.path" :class="menu.code">
+                    <div class="nav">
+                        <div class="ih ispr" :class="menu.classCode"></div>
+                        <p>{{menu.text}}</p>
+                    </div>
+                </router-link>
+            </li>
         </ul>
     </div>
 </template>
@@ -19,17 +19,17 @@ const menuData = [{
     text: '首页',
     path: '/home',
     code: 'home',
-    classCode:'ih'
+    classCode: 'ih'
 }, {
     text: '分类',
     path: '/classification',
     code: 'classification',
-    classCode:'ic'
+    classCode: 'ic'
 }, {
-    text: '车',
+    text: '购物车',
     path: '/shoppingcart',
     code: 'shoppingcart',
-    classCode:'is'
+    classCode: 'is'
 }];
 
 export default {
@@ -60,11 +60,12 @@ export default {
 }
 
 .footer ul {
-    display:-webkit-box;
-    display:box;
+    display: -webkit-box;
+    display: box;
     -webkit-box-align: center;
     -webkit-box-pack: center;
 }
+
 .footer .nav .ispr {
     width: .4*1.5rem;
     height: .4*1.5rem;
@@ -77,44 +78,56 @@ export default {
     overflow: hidden;
     margin: 0 auto .08*1.5rem
 }
+
 .footer .nav .ispr.ih {
     background-position-y: -2.8*1.5rem
 }
+
 .footer .nav .ispr.ic {
     background-position-y: -.4*1.5rem
 }
+
 .footer .nav .ispr.is {
     background-position-y: -1.2*1.5rem
 }
+
 .footer .nav .ispr.if {
     background-position-y: -2*1.5rem
 }
+
 .footer .nav p {
     font-size: .22*1.5rem;
     line-height: .8;
     color: #999
 }
+
 .footer li {
     -webkit-box-flex: 1;
     width: 100%;
     text-align: center;
 }
+
 .footer li>a {
     display: block;
     padding: .12*1.5rem 0
 }
+
 .footer li>a.on .nav p {
     color: #FF5722
 }
+
 .footer li>a.on .nav .ispr.ih {
     background-position-y: -2.4*1.5rem
 }
+
 .footer li>a.on .nav .ispr.ic {
     background-position-y: 0
 }
+
 .footer li>a.on .nav .ispr.is {
     background-position-y: -.8*1.5rem
 }
+
 .footer li>a.on .nav .ispr.if {
     background-position-y: -1.6*1.5rem
 }
