@@ -70,11 +70,11 @@ export default {
     width: .4*1.5rem;
     height: .4*1.5rem;
     background-image: url(../../assets/images/foot-spr.png);
-    -webkit-background-size: .4*1.5rem 3.2*1.5rem;
-    -moz-background-size: .4*1.5rem 3.2*1.5rem;
-    -ms-background-size: .4*1.5rem 3.2*1.5rem;
-    -o-background-size: .4*1.5rem 3.2*1.5rem;
-    background-size: .4*1.5rem 3.2*1.5rem;
+    -webkit-background-size: .4*1.5rem 3.19*1.5rem;
+    -moz-background-size: .4*1.5rem 3.19*1.5rem;
+    -ms-background-size: .4*1.5rem 3.19*1.5rem;
+    -o-background-size: .4*1.5rem 3.19*1.5rem;
+    background-size: .4*1.5rem 3.19*1.5rem;
     overflow: hidden;
     margin: 0 auto .08*1.5rem
 }
