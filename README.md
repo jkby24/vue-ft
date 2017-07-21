@@ -32,7 +32,7 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
     price:'',//价格
     classification:'',//分类
     create_date:'',
-    update_date:'',//77
+    update_date:'',//88
     create_by:'',
     status:''//状态
 }
