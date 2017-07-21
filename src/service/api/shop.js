@@ -4,7 +4,7 @@
 const _commodities = [
   {"commodity_id": 1, "commodity_name": "iPad 4 Mini", "price": 500.01, "inventory": 2},
   {"commodity_id": 3, "commodity_name": "H&M T-Shirt White", "price": 10.99, "inventory": 10},
-  {"commodity_id": 3, "commodity_name": "Charli XCX - Sucker CD", "price": 19.99, "inventory": 5}
+  {"commodity_id": 6, "commodity_name": "Charli XCX - Sucker CD", "price": 19.99, "inventory": 5}
 ]
 
 export default {
